@@ -47,6 +47,7 @@ NODES=(
     "https://github.com/WASasquatch/was-node-suite-comfyui.git"
     "https://github.com/crystian/ComfyUI-Crystools.git"
     "https://github.com/calcuis/gguf.git"
+    "https://github.com/kijai/ComfyUI-KJNodes.git"
 )
 
 # shellcheck disable=SC2034
@@ -117,7 +118,7 @@ function provisioning_start() {
         "${COMFYUI_DIR}/models/unet" \
         "${UNET_MODELS[@]}"
     provisioning_get_files \
-        "${COMFYUI_DIR}/models/lora" \
+        "${COMFYUI_DIR}/models/loras" \
         "${LORA_MODELS[@]}"
     provisioning_get_files \
         "${COMFYUI_DIR}/models/controlnet" \
@@ -153,7 +154,7 @@ function provisioning_get_pip_packages() {
 function provisioning_get_nodes() {
     for repo in "${NODES[@]}"; do
         dir="${repo##*/}"
-        path="${COMFYUI_DIR}custom_nodes/${dir}"
+        path="${COMFYUI_DIR}/custom_nodes/${dir}"
         requirements="${path}/requirements.txt"
         if [[ -d $path ]]; then
             if [[ ${AUTO_UPDATE,,} != "false" ]]; then
