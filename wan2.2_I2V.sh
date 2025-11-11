@@ -49,6 +49,11 @@ NODES=(
     "https://github.com/crystian/ComfyUI-Crystools.git"
     "https://github.com/calcuis/gguf.git"
     "https://github.com/kijai/ComfyUI-KJNodes.git"
+    "https://github.com/lldacing/ComfyUI_PuLID_Flux_ll"
+    "https://github.com/chrisgoringe/cg-use-everywhere"
+    "https://github.com/Jonseed/ComfyUI-Detail-Daemon"
+    "https://github.com/filliptm/ComfyUI_Fill-Nodes"
+    "https://github.com/chflame163/ComfyUI_LayerStyle"
 )
 
 # shellcheck disable=SC2034
